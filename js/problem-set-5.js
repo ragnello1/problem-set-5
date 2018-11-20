@@ -40,7 +40,7 @@ while (x != height) {
   hash = hash + "#";
   x++;
 }
-result.innerHTML += hash + "<br/>";
+result.innerHTML = hash + "<br/>";
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
