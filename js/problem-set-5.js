@@ -36,6 +36,7 @@ if (height < 1 || height > 23) {
 let result = document.getElementById("mario-easy-output");
 let hash = "##";
 let x = 1;
+let space = 0;
 while (x != height) {
   hash = hash + "#" + "<br/>";
   x++;
