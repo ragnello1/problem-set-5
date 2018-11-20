@@ -37,10 +37,10 @@ let result = document.getElementById("mario-easy-output");
 let hash = "##";
 let x = 1;
 while (x != height) {
-  hash = hash + "#";
+  hash = hash + "#" + "<br/>;
   x++;
 }
-result.innerHTML = hash + "<br/>";
+result.innerHTML = hash;
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
