@@ -27,20 +27,20 @@ function mario() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 1 CODE HERE
-let input = prompt ("Please enter an integer within the range 1 and 23")
-if (input < 1 || input > 23) {
-  while (input < 1 || input > 23) {
-  input = prompt ("Integer is invalid.  Please enter another")
+let height = prompt ("Please enter an integer within the range 1 and 23")
+if (height < 1 || height > 23) {
+  while (height < 1 || height > 23) {
+  height = prompt ("Integer is invalid.  Please enter another")
   }
 }
 let result = document.getElementById("mario-easy-output")
-let hash = "#"
+let hash = "##"
 let x = 1;
-while (x != input) {
-  hash = hash + "#"
+while (x != height) {
+  hash++;
   x++;
 }
-result.innerHTML = step
+result.innerHTML = (<br/> + hash)
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
