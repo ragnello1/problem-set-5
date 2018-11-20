@@ -37,7 +37,7 @@ let result = document.getElementById("mario-easy-output")
 let hash = "##"
 let x = 1;
 while (x != height) {
-  hash++;
+  hash = hash + "#";
   x++;
 }
 result.innerHTML = hash + <br/>
