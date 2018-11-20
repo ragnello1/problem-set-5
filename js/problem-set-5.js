@@ -27,7 +27,7 @@ function mario() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 1 CODE HERE
-let height = prompt ("Please enter an integer within the range 1 and 23")
+height = prompt ("Please enter an integer within the range 1 and 23")
 if (height < 1 || height > 23) {
   while (height < 1 || height > 23) {
   height = prompt ("Integer is invalid.  Please enter another")
@@ -40,7 +40,7 @@ while (x != height) {
   hash++;
   x++;
 }
-result.innerHTML = (<br/> + hash)
+result.innerHTML = hash + <br/>
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
