@@ -33,15 +33,19 @@ if (height < 1 || height > 23) {
   height = prompt ("Integer is invalid.  Please enter another");
   }
 }
-let result = document.getElementById("mario-easy-output");
-let hash = "##";
-let x = 1;
-let space = 0;
+
+var result = document.getElementById("mario-easy-output");
+result.innerHTML = '';
+
+let hash = "##" + "<br/>";
+let x = 0;
+let space = ;
 while (x != height) {
-  hash = hash + "#" + "<br/>";
-  x++;
-}
-result.innerHTML = hash;
+  hash = hash + "#"
+  result.innerHTML += hash
+  x++
+};
+
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
