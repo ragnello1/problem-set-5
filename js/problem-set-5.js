@@ -37,10 +37,17 @@ if (height < 1 || height > 23) {
 let p = document.getElementById("mario-easy-output");
 let hash = "##";
 let space = "<br/>";
+let add = "#";
 let y = 0;
 while (y < height) {
+  if (y < 1) {
     p.innerHTML += hash + space;
     y++;
+  } else {
+    p.innerHTML += add + hash + space;
+    add = add + "#";
+    y++;
+  };
 };
 
 
