@@ -31,20 +31,19 @@ height = prompt ("Please enter an integer within the range 1 and 23");
 if (height < 1 || height > 23) {
   while (height < 1 || height > 23) {
   height = prompt ("Integer is invalid.  Please enter another");
-  }
-}
-
-var result = document.getElementById("mario-easy-output");
-result.innerHTML = '';
-
-let hash = "##" + "<br/>";
-let x = 0;
-let space = ;
-while (x != height) {
-  hash = hash + "#"
-  result.innerHTML += hash
-  x++
+  };
 };
+
+let p = document.getElementById("mario-easy-output");
+let hash = "##";
+let space = "<br/>";
+let y = 0;
+while (y < height) {
+    p.innerHTML += hash + space;
+    y++;
+};
+
+
 
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
