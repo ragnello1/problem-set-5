@@ -27,31 +27,30 @@ function mario() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 1 CODE HERE
+let p = document.getElementById("mario-easy-output");
+let hash = "##";
+let space = "&nbsp";
+let add = "#";
+let y = 0;
+let x;
+
 height = prompt ("Please enter an integer within the range 1 and 23");
 if (height < 1 || height > 23) {
   while (height < 1 || height > 23) {
-  height = prompt ("Integer is invalid.  Please enter another");
-  };
-};
+  height = prompt ("Please enter an integer within the range 1 and 23");
+  }
+}
 
-let p = document.getElementById("mario-easy-output");
-let hash = "##";
-let space = "<br/>";
-let add = "#";
-let y = 0;
 while (y < height) {
-  if (y < 1) {
-    p.innerHTML += hash + space;
-    y++;
-  } else {
-    p.innerHTML += add + hash + space;
-    add = add + "#";
-    y++;
-  };
-};
-
-
-
+    if (y < 1) {
+      p.innerHTML += hash + "<br/>";
+      y++;
+    } else {
+      p.innerHTML += add + hash + "<br/>";
+      add += "#";
+      y++;
+    }
+  }
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -213,6 +212,40 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
+// windspeed = prompt ("Please enter an integer within the range 0 and infinity");
+//   if (windspeed < 0) {
+//     while (windspeed < 0) {
+//     windspeed = prompt ("Please enter an integer within the range 0 and infinity");
+//     }
+//   }
+do {
+  windspeed = prompt ("Please enter an integer within the range 0 and infinity");
+  windspeed = Number(windspeed)
+} while (windspeed < 0);
+
+let p = document.getElementById("hurricane-output")
+
+if (windspeed > -1 && windspeed < 39) {
+  p.innerHTML = "The skies are calm...";
+}
+if (windspeed > 38 && windspeed < 74) {
+  p.innerHTML = "Tropical Storm.";
+}
+if (windspeed > 73 && windspeed < 96 ) {
+  p.innerHTML = "Category 1 Hurricane.";
+}
+if (windspeed > 95 && windspeed < 111 ) {
+  p.innerHTML = "Category 2 Hurricane.";
+}
+if (windspeed > 110 && windspeed < 130 ) {
+  p.innerHTML = "Category 3 Hurricane.";
+}
+if (windspeed > 129 && windspeed < 157 ) {
+  p.innerHTML = "Category 4 Hurricane.";
+}
+if (windspeed > 156) {
+  p.innerHTML = "Category 5 Hurricane.";
+}
 
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
