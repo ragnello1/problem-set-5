@@ -27,30 +27,16 @@ function mario() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 1 CODE HERE
-let p = document.getElementById("mario-easy-output");
 let hash = "##";
 let space = "&nbsp";
 let add = "#";
-let y = 0;
-let x;
 
-height = prompt ("Please enter an integer within the range 1 and 23");
-if (height < 1 || height > 23) {
-  while (height < 1 || height > 23) {
+do {
   height = prompt ("Please enter an integer within the range 1 and 23");
-  }
-}
+  height = Number(height);
+} while (height < 1 || height > 23);
 
-while (y < height) {
-    if (y < 1) {
-      p.innerHTML += hash + "<br/>";
-      y++;
-    } else {
-      p.innerHTML += add + hash + "<br/>";
-      add += "#";
-      y++;
-    }
-  }
+// document.getElementById("mario-easy-output").innerHTML
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -177,6 +163,23 @@ function credit() {
 function guess() {
 
   // WRITE YOUR EXERCISE 4 CODE HERE
+let numb = Math.floor(Math.random() * 1000);
+let p = document.getElementById("guess-output");
+let guesses = 0;
+console.log(numb);
+
+let guess = prompt("Please Enter Your Guess.");
+
+while (guess != numb) {
+if (guess > numb) {
+    guesses++;
+    p.innerHTML = "Incorrect. Number is Lower."
+  }
+if (guess < numb) {
+    guesses++;
+    p.innerHTML = "Incorrect. Number is Higher."
+  }
+}
 
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
@@ -223,7 +226,7 @@ do {
   windspeed = Number(windspeed)
 } while (windspeed < 0);
 
-let p = document.getElementById("hurricane-output")
+let p = document.getElementById("hurricane-output");
 
 if (windspeed > -1 && windspeed < 39) {
   p.innerHTML = "The skies are calm...";
