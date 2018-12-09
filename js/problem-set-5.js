@@ -457,10 +457,18 @@ let p = document.getElementById("report-card-output");
        break;
      }
    }
-
    while(true) {
-     let hwinput = Number(prompt("Enter homework scores and then enter -1 when done."));
-     if (hwinput >= 0 && hwimput <= 100 && Number.isInteger(hwinput)){
+     let tinput = Number(prompt("Enter your test scores. Then enter -1 to complete."));
+     if (tinput >= 0 && tinput <= 100 && Number.isInteger(tinput)){
+       testTotal = tinput + testTotal;
+       tests++;
+     } else if (tinput == -1) {
+       break;
+     }
+   }
+   while(true) {
+     let hwinput = Number(prompt("Enter your homework scores. Then enter -1 to complete."));
+     if (hwinput >= 0 && hwinput <= 100 && Number.isInteger(hwinput)){
        homeworkTotal = hwinput + homeworkTotal;
        homeworks++;
      } else if (hwinput == -1) {
